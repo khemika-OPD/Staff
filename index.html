@@ -4,39 +4,167 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>คลังความรู้บุคลากร HT - รพ.ตาคลี</title>
-    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;700&family=Kanit:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        body { font-family: 'Sarabun', sans-serif; background-color: #f8fafc; margin: 0; padding: 20px; text-align: center; }
-        .container { max-width: 600px; margin: 0 auto; background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        h1 { color: #0d9488; font-size: 24px; }
-        .card { background: #f1f5f9; padding: 15px; border-radius: 10px; text-align: left; margin-bottom: 15px; border-left: 5px solid #0d9488; }
-        .card h3 { margin: 0 0 5px 0; color: #1e293b; font-size: 18px; }
-        .card p { margin: 0; color: #64748b; font-size: 15px; }
-        .btn-link { display: inline-block; margin-top: 10px; color: #0d9488; font-weight: bold; text-decoration: none; }
+        body { 
+            font-family: 'Sarabun', sans-serif; 
+            background-color: #f0f4f8; 
+            margin: 0; 
+            padding: 20px; 
+            display: flex;
+            justify-content: center;
+        }
+        .container { 
+            max-width: 650px; 
+            width: 100%;
+            background: white; 
+            padding: 30px; 
+            border-radius: 20px; 
+            box-shadow: 0 10px 25px rgba(13, 148, 136, 0.1); 
+        }
+        .header-zone {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        h1 { 
+            font-family: 'Kanit', sans-serif;
+            color: #0d9488; 
+            font-size: 26px; 
+            margin: 0 0 5px 0;
+        }
+        .subtitle {
+            color: #64748b;
+            font-size: 15px;
+            margin: 0;
+            font-weight: 500;
+        }
+        .badge {
+            display: inline-block;
+            background: #ccfbf1;
+            color: #0f766e;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .card { 
+            background: #ffffff; 
+            padding: 18px; 
+            border-radius: 14px; 
+            text-align: left; 
+            margin-bottom: 16px; 
+            border: 1px solid #e2e8f0;
+            border-left: 6px solid #0d9488; 
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 6px;
+        }
+        .card-header i {
+            color: #0d9488;
+            font-size: 20px;
+        }
+        .card h3 { 
+            margin: 0; 
+            color: #1e293b; 
+            font-size: 17px; 
+            font-family: 'Kanit', sans-serif;
+        }
+        .card p { 
+            margin: 0; 
+            color: #64748b; 
+            font-size: 14px; 
+            line-height: 1.5;
+        }
+        .btn-link { 
+            display: inline-flex; 
+            align-items: center;
+            gap: 5px;
+            margin-top: 12px; 
+            color: #0d9488; 
+            font-weight: bold; 
+            text-decoration: none; 
+            font-size: 14px;
+        }
+        .btn-link.disabled {
+            color: #94a3b8;
+            cursor: not-allowed;
+        }
+        .footer {
+            margin-top: 25px;
+            font-size: 11px;
+            color: #94a3b8;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>📑 คลังความรู้ดิจิทัลบุคลากรพยาบาล OPD</h1>
-        <p>โรงพยาบาลตาคลี (Hypertension Knowledge Management)</p>
-        <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 20px 0;">
+        <div class="header-zone">
+            <h1>📑 คลังความรู้ดิจิทัลบุคลากรพยาบาล OPD</h1>
+            <p class="subtitle">โรงพยาบาลตาคลี (Hypertension Knowledge Management)</p>
+            <span class="badge"><i class="fa-solid fa-code-branch"></i> Version 1.1 (Beta)</span>
+        </div>
+        
+        <hr style="border: 0; border-top: 1px solid #edf2f7; margin-bottom: 20px;">
         
         <div class="card">
-            <h3>1. แนวทางเวชปฏิบัติ CPG Hypertension ล่าสุด</h3>
-            <p>เกณฑ์การวินิจฉัย การแบ่งระดับความรุนแรง และสูตรยารักษามาตรฐาน</p>
-            <a href="#" class="btn-link">🔗 เปิดดูคู่มือฉบับเต็ม</a>
+            <div class="card-header">
+                <i class="fa-solid fa-book-medical"></i>
+                <h3>1. แนวทางเวชปฏิบัติ CPG Hypertension ล่าสุด</h3>
+            </div>
+            <p>เกณฑ์การวินิจฉัย สูตรยารักษามาตรฐาน และการจัดการภาวะดื้อยา (Resistant HT) อัปเดตปี 2567/2568</p>
+            <a href="#" class="btn-link disabled"><span>🔒 กำลังเปิดระบบลิงก์เอกสาร</span></a>
+        </div>
+
+        <div class="card" style="border-left-color: #0f766e;">
+            <div class="card-header">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <h3>2. การประเมินภาวะวิกฤตความดันโลหิตสูง (Urgency/Emergency)</h3>
+            </div>
+            <p>แนวทางการคัดกรองความเสียหายของอวัยวะเป้าหมายเฉียบพลัน (Target Organ Damage) สำหรับงานซักประวัติหน้าห้องตรวจ</p>
+            <a href="#" class="btn-link disabled"><span>🔒 กำลังเปิดระบบลิงก์เอกสาร</span></a>
+        </div>
+
+        <div class="card" style="border-left-color: #115e59;">
+            <div class="card-header">
+                <i class="fa-solid fa-calculator"></i>
+                <h3>3. โปรแกรมคิดคำนวณทางการแพทย์หน้างาน (Clinical Calculators)</h3>
+            </div>
+            <p>ระบบคำนวณอัตโนมัติความดันเฉลี่ยหลอดเลือดแดง (MAP Calculator), ดัชนีมวลกาย (BMI) และการประเมินกิจกรรมประจำวัน (Barthel Index)</p>
+            <a href="#" class="btn-link disabled"><span>🔒 ระบบดิจิทัลทูลส์กำลังเตรียมติดตั้ง</span></a>
         </div>
 
         <div class="card">
-            <h3>2. คลังแนวตอบคำถามยอดฮิต (FAQ จากคนไข้)</h3>
-            <p>เทคนิคการสื่อสารและตอบคำถามเมื่อเจอคนไข้ปฏิเสธการทานยาหรือกลัวไตพัง</p>
-            <a href="#" class="btn-link">🔗 เปิดดูแนวทางการตอบ</a>
+            <div class="card-header">
+                <i class="fa-solid fa-comments"></i>
+                <h3>4. คลังแนวตอบคำถามยอดฮิต (FAQ การสื่อสารหน้างาน)</h3>
+            </div>
+            <p>รวมชุดประโยคและจิตวิทยาการคุยสกัดจากพยาบาลอาวุโส เมื่อเจอคนไข้ปฏิเสธการกินยาหรือกลัวไตพัง</p>
+            <a href="#" class="btn-link disabled"><span>🔒 กำลังเปิดระบบลิงก์เอกสาร</span></a>
         </div>
 
         <div class="card">
-            <h3>3. สื่อสุขศึกษา & วิดีโอสอนคนไข้</h3>
-            <p>รวมลิงก์คลิปวิดีโอ 8 ชุด และคลิปเต้นสลายความดันเพื่อประเมินก่อนสอนผู้ป่วย</p>
-            <a href="Dancefit.html" class="btn-link">🔗 ไปยังระบบ Takhli DanceFit</a>
+            <div class="card-header">
+                <i class="fa-solid fa-film"></i>
+                <h3>5. สื่อสุขศึกษา & วิดีโอสอนคนไข้</h3>
+            </div>
+            <p>รวมลิงก์คลิปวิดีโอ 8 ชุด และระบบท่าเต้นมวยจีนสลายความดันเพื่อประเมินและสอนสุขศึกษาผู้ป่วยรายบุคคล</p>
+            <a href="Dancefit.html" class="btn-link" style="color: #0284c7;"><i class="fa-solid fa-arrow-right-to-bracket"></i> <span>ไปยังระบบ Takhli DanceFit</span></a>
+        </div>
+
+        <div class="footer">
+            พัฒนาและออกแบบระบบจัดการความรู้โดย คุณเขมิกา OPD | โรงพยาบาลตาคลี
         </div>
     </div>
 </body>
